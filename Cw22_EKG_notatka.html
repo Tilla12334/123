@@ -1,104 +1,89 @@
 <!doctype html>
 <html lang="pl"><head><meta charset="utf-8">
 <style>
-@page{size:A4;margin:13mm 14mm}
-body{font-family:"DejaVu Sans",Arial,sans-serif;font-size:9.1pt;line-height:1.3;color:#111;margin:0}
-h1{font-size:15pt;margin:0 0 2px;color:#8a1c1c}
-.sub{font-size:8.5pt;color:#555;margin-bottom:8px}
-h2{break-after:avoid;font-size:10.5pt;margin:7px 0 3px;padding:2px 6px;background:#f3e3e3;color:#8a1c1c;border-radius:3px}
+@page{size:A4;margin:9mm 11mm}
+body{font-family:"DejaVu Sans",Arial,sans-serif;font-size:8.7pt;line-height:1.26;color:#111;margin:0}
+h1{font-size:14pt;margin:0 0 1px;color:#8a1c1c}
+.sub{font-size:8pt;color:#555;margin-bottom:5px}
+h2{break-after:avoid;font-size:9.8pt;margin:4px 0 2px;padding:2px 6px;background:#f3e3e3;color:#8a1c1c;border-radius:3px}
 p{margin:2px 0}
-ul{margin:2px 0 2px 16px;padding:0}li{margin:1px 0}
-table{border-collapse:collapse;width:100%;margin:3px 0;font-size:9pt}
-td,th{border:1px solid #bbb;padding:2px 5px;text-align:left;vertical-align:top}
+ul{margin:1px 0 1px 15px;padding:0}li{margin:1px 0}
+table{border-collapse:collapse;width:100%;margin:2px 0;font-size:8.8pt}
+td,th{border:1px solid #bbb;padding:1px 5px;text-align:left;vertical-align:top}
 th{background:#eee}
-.f{background:#fff7d6;border:1px solid #e3c766;padding:3px 7px;border-radius:3px;margin:3px 0;display:inline-block}
+.f{background:#fff7d6;border:1px solid #e3c766;padding:1px 6px;border-radius:3px;font-weight:bold;white-space:nowrap}
+.leg{font-size:8.2pt;color:#444;margin:1px 0 3px 4px}
 .row{break-inside:avoid;display:flex;gap:10px;align-items:flex-start}
 .row>div{flex:1}
-img{max-width:100%;display:block;margin:3px auto}
-.cap{font-size:7.5pt;color:#666;text-align:center}
-.box{border:1.5px solid #8a1c1c;padding:4px 8px;border-radius:4px;margin-top:8px}
-b.r{color:#8a1c1c}
+img{max-width:100%;display:block;margin:2px auto}
+.cap{font-size:7pt;color:#666;text-align:center}
 </style></head><body>
 
-<h1>Ćw. 22: Fizyczne podstawy elektrokardiografii</h1>
-<div class="sub">Na podst. F. Jaroszyk, <i>Biofizyka</i>, rozdz. 18.7.1 (str. 644–658)</div>
+<h1>Ćw. 22: Fizyczne podstawy EKG</h1>
+<div class="sub">Jaroszyk, <i>Biofizyka</i>, rozdz. 18.7.1</div>
 
 <h2>1. Potencjał i napięcie</h2>
-<p><b>Potencjał</b> = praca przeniesienia ładunku z ∞ do punktu / ładunek: <span class="f">V = W/q</span> [V = J/C]. <b>Napięcie</b> = różnica potencjałów: <span class="f">U = V<sub>A</sub> − V<sub>B</sub></span>.
+<p><span class="f">V = W / q</span> &nbsp;&nbsp; <span class="f">U = V<sub>A</sub> − V<sub>B</sub></span></p>
+<p class="leg">V to potencjał [V], W praca przeniesienia ładunku z nieskończoności do punktu [J], q ładunek [C], U napięcie (różnica potencjałów) między punktami A i B [V].<br>
 EKG mierzy <b>napięcia między punktami na skórze</b>, rzędu ~1 mV.</p>
 
-<h2>2. Dipol, moment dipolowy, II prawo Kirchhoffa</h2>
+<h2>2. Dipol i II prawo Kirchhoffa</h2>
+<p><span class="f">p = q · l</span></p>
+<p class="leg">p to moment dipolowy [C·m], wektor skierowany od − do +; q to ładunek bieguna [C]; l to odległość między biegunami [m].</p>
 <ul>
-<li><b>Dipol</b>: ładunki +q i −q w odległości l. <b>Moment dipolowy</b> <span class="f">p = q·l</span> [C·m], wektor od − do +.</li>
-<li><b>Serce = dipol</b>: każde pobudzone włókno to mikrodipol (część pobudzona jest „−” na zewnątrz, niepobudzona „+”). Suma wektorowa mikrodipoli to <b>główny wektor elektryczny serca W</b>, zmienny w czasie.</li>
-<li>Wychylenie w danym odprowadzeniu = <b>rzut wektora W na oś odprowadzenia</b>.</li>
-<li><b>II prawo Kirchhoffa</b>: suma napięć w zamkniętym oczku = 0. Dla trójkąta Einthovena: (V<sub>L</sub>−V<sub>P</sub>)+(V<sub>P</sub>−V<sub>N</sub>)+(V<sub>N</sub>−V<sub>L</sub>)=0, stąd <span class="f"><b>II = I + III</b></span>.</li>
+<li>Pobudzone włókno to <b>mikrodipol</b>: część pobudzona jest „−” na zewnątrz, niepobudzona „+”. Suma mikrodipoli daje <b>wektor elektryczny serca W</b>, zmienny w czasie.</li>
+<li>Wychylenie w odprowadzeniu = <b>rzut W na oś odprowadzenia</b>.</li>
+<li><b>II prawo Kirchhoffa</b>: suma napięć w zamkniętym oczku = 0. Dla odprowadzeń kończynowych: I − II + III = 0, stąd <span class="f">II = I + III</span></li>
 </ul>
 
-<h2>3. Układ bodźcowo-przewodzący i potencjały czynnościowe</h2>
-<p><b>Węzeł SA</b> → wiązki (Bachmanna, Wenckebacha, Thorela) → <b>węzeł AV</b> → <b>pęczek Hisa</b> (odnoga prawa i lewa) → <b>włókna Purkinjego</b> → mięsień komór.</p>
-<ul>
-<li>Między przedsionkami a komorami leży tkanka łączna, czyli <b>izolator</b>: pobudzenie przechodzi tylko przez AV i pęczek Hisa. Komórki łączą <b>wstawki o małym oporze</b>.</li>
-<li><b>Automatyzm</b>: komórki rozrusznikowe mają powolną spontaniczną depolaryzację. <b>SA ~1,2 Hz (70/min)</b>, włókna Purkinjego ~0,5 Hz (30/min). Rytm narzuca najszybszy ośrodek.</li>
-</ul>
-<table><tr><th>Faza (komórka kurczliwa)</th><th>Potencjał</th><th>Jony</th></tr>
-<tr><td>Spoczynek</td><td>ok. −90 mV</td><td>pompa Na⁺/K⁺, dyfuzja K⁺</td></tr>
-<tr><td>Depolaryzacja</td><td>do ok. +20 mV</td><td>szybki napływ <b>Na⁺</b></td></tr>
-<tr><td><b>Plateau</b> (~200–300 ms)</td><td>~0 mV</td><td>napływ <b>Ca²⁺</b></td></tr>
-<tr><td>Repolaryzacja</td><td>powrót do −90 mV</td><td>wypływ <b>K⁺</b>, spadek przewodności dla Ca²⁺</td></tr></table>
-<p>Długa <b>refrakcja bezwzględna</b> (prawie cały skurcz) sprawia, że serce nie wchodzi w skurcz tężcowy.</p>
+<h2>3. Układ bodźcowo-przewodzący i potencjał czynnościowy</h2>
+<p><b>SA → AV → pęczek Hisa (odnogi) → włókna Purkinjego → komory</b>. Między przedsionkami a komorami leży izolator (tkanka łączna), więc pobudzenie przechodzi tylko przez AV.<br>
+<b>Automatyzm</b>: powolna spontaniczna depolaryzacja; SA ~70/min, włókna Purkinjego ~30/min.</p>
+<table><tr><th>Spoczynek</th><th>Depolaryzacja</th><th>Plateau</th><th>Repolaryzacja</th></tr>
+<tr><td>−90 mV, pompa Na⁺/K⁺</td><td>do +20 mV, napływ <b>Na⁺</b></td><td>napływ <b>Ca²⁺</b></td><td>wypływ <b>K⁺</b></td></tr></table>
+<p>Długa refrakcja bezwzględna, więc brak skurczu tężcowego.</p>
 
-<h2>4. Co mierzy elektrokardiograf i jak działa</h2>
-<ul>
-<li>EKG to zapis w czasie <b>różnic potencjałów [mV]</b> między punktami ciała, wywołanych zmianami pola elektrycznego serca. Obrazuje pracę <b>bioelektryczną</b>, nie mechaniczną.</li>
-<li>Schemat: <b>elektrody → układ przełączający → układ wzmacniający → układ rejestrujący</b>.</li>
-<li>Standard: <b>1 mV = 10 mm</b>, przesuw <b>25 mm/s</b> (1 mm = 0,04 s) lub 50 mm/s.</li>
-</ul>
+<h2>4. Elektrokardiograf</h2>
+<p>Rejestruje <b>napięcie [mV] w funkcji czasu [s]</b>, czyli bioelektryczną (nie mechaniczną) pracę serca.<br>
+<b>Elektrody → układ przełączający → wzmacniacz → rejestrator.</b> Standard: 1 mV = 10 mm, przesuw 25 mm/s (1 mm = 0,04 s).</p>
 
-<h2>5. Zjawiska bioelektryczne a krzywa EKG</h2>
+<h2>5. Krzywa EKG</h2>
 <div class="row">
-<div style="flex:1.15">
+<div style="flex:1.3">
 <table><tr><th>Element</th><th>Oznacza</th><th>Norma</th></tr>
 <tr><td><b>P</b></td><td>depolaryzacja przedsionków</td><td>&lt; 0,1 s</td></tr>
-<tr><td><b>Przedział PQ</b></td><td>przejście pobudzenia z przedsionków do komór (AV, pęczek Hisa)</td><td>&lt; 0,2 s</td></tr>
-<tr><td><b>QRS</b></td><td>depolaryzacja komór (w nim ukryta repolaryzacja przedsionków)</td><td>&lt; 0,12 s</td></tr>
-<tr><td><b>ST</b></td><td>całe komory pobudzone</td><td>linia izoel.</td></tr>
+<tr><td><b>PQ</b></td><td>przewodzenie przez AV i pęczek Hisa</td><td>&lt; 0,2 s</td></tr>
+<tr><td><b>QRS</b></td><td>depolaryzacja komór</td><td>&lt; 0,12 s</td></tr>
+<tr><td><b>ST</b></td><td>komory całkowicie pobudzone (linia izoelektryczna)</td><td></td></tr>
 <tr><td><b>T</b></td><td>repolaryzacja komór</td><td></td></tr>
 <tr><td><b>U</b></td><td>repolaryzacja włókien Purkinjego (nie zawsze)</td><td></td></tr>
-<tr><td><b>QT</b></td><td>elektryczny skurcz komór</td><td>0,32–0,39 s (70/min)</td></tr></table>
-<p><b>Linia izoelektryczna</b> (0 mV): brak różnic potencjałów w sercu.<br>
-Wydłużony PQ to blok AV, poszerzony QRS to zaburzenie przewodzenia w komorach.</p>
+<tr><td><b>QT</b></td><td>elektryczny skurcz komór</td><td>0,32–0,39 s</td></tr></table>
 </div>
-<div style="flex:0.75"><img src="img/ekg_krzywa.png" style="max-height:62mm"><div class="cap">Ryc. 18.30 (Jaroszyk)</div></div>
+<div style="flex:0.7"><img src="img/ekg_krzywa.png" style="max-height:42mm"><div class="cap">Ryc. 18.30</div></div>
 </div>
 
-<h2>6. Odprowadzenia i trójkąt Einthovena</h2>
-<p>Odprowadzenie = para elektrod (lub elektroda i punkt odniesienia), między którymi mierzy się napięcie. Elektrody: <b>PR</b> prawa ręka, <b>LR</b> lewa ręka, <b>LN</b> lewa noga (prawa noga to uziemienie).</p>
+<h2>6. Odprowadzenia</h2>
+<p class="leg">V<sub>P</sub>, V<sub>L</sub>, V<sub>N</sub> to potencjały: prawej ręki (PR), lewej ręki (LR) i lewej nogi (LN). Prawa noga to uziemienie.</p>
 <table><tr><th>Typ</th><th>Odprowadzenia</th><th>Konstrukcja</th></tr>
-<tr><td><b>Einthoven</b><br>dwubiegunowe</td><td>I = V<sub>L</sub>−V<sub>P</sub><br>II = V<sub>N</sub>−V<sub>P</sub><br>III = V<sub>N</sub>−V<sub>L</sub></td><td>napięcie między dwiema kończynami; <b>II = I + III</b></td></tr>
-<tr><td><b>Wilson</b><br>jednobiegunowe</td><td>VR, VL, VF</td><td>3 kończyny przez <b>jednakowe oporniki R</b> tworzą wspólny punkt odniesienia PO (≈0 V); elektroda badająca na jednej kończynie</td></tr>
-<tr><td><b>Goldberger</b><br>jednobieg. wzmocnione</td><td>aVR, aVL, aVF</td><td>PO = <b>zwarcie 2 pozostałych kończyn</b>, pomiar względem trzeciej; <b>większe amplitudy</b> niż u Wilsona</td></tr></table>
-<p><b>Trójkąt Einthovena</b>: PR, LR i LN tworzą w przybliżeniu <b>trójkąt równoboczny</b> z sercem (dipolem) w środku. Boki to osie odprowadzeń: I = 0°, II = +60°, III = +120°.</p>
+<tr><td><b>Einthoven</b> (dwubiegunowe)</td><td>I = V<sub>L</sub> − V<sub>P</sub><br>II = V<sub>N</sub> − V<sub>P</sub><br>III = V<sub>N</sub> − V<sub>L</sub></td><td>napięcie między dwiema kończynami</td></tr>
+<tr><td><b>Wilson</b> (jednobiegunowe)</td><td>VR, VL, VF</td><td>3 kończyny przez jednakowe oporniki R dają punkt odniesienia PO ≈ 0 V</td></tr>
+<tr><td><b>Goldberger</b> (wzmocnione)</td><td>aVR, aVL, aVF</td><td>PO = zwarte 2 pozostałe kończyny; <b>większe amplitudy</b></td></tr></table>
+<p><b>Trójkąt Einthovena</b>: PR, LR i LN to wierzchołki trójkąta równobocznego, serce leży w środku. Osie odprowadzeń: I = 0°, II = +60°, III = +120°.</p>
 
-<h2>7. Wyznaczanie wektora elektrycznego serca</h2>
+<h2>7. Wektor elektryczny serca</h2>
 <div class="row">
-<div>
-<ol style="margin:2px 0 2px 16px;padding:0">
-<li>Odczytaj amplitudę załamka R (z uwzględnieniem znaku, R − Q − S) w odprowadzeniach I, II, III.</li>
-<li>Odłóż te wartości jako wektory R<sub>I</sub>, R<sub>II</sub>, R<sub>III</sub> na odpowiednich bokach trójkąta, od środka boku.</li>
-<li>Z początków i końców wektorów poprowadź <b>prostopadłe</b> do boków.</li>
-<li>Punkty przecięcia prostopadłych wyznaczają początek i koniec <b>W<sub>R</sub></b>.</li>
-</ol>
-<p>W<sub>R</sub> pokrywa się w przybliżeniu z <b>anatomiczną osią serca</b>. Tak samo wyznacza się W<sub>P</sub>, W<sub>Q</sub>, W<sub>S</sub>, W<sub>T</sub>.</p>
-<p>Rachunkowo (kąt α względem I):<br><span class="f">tg α = (I + 2·III) / (√3·I)</span></p>
-<p><b>Norma osi: −30° do +90°</b>. Poniżej −30° to lewogram, powyżej +90° prawogram.</p>
+<div style="flex:1.35">
+<p>Amplitudy R z odprowadzeń I, II, III odkłada się na bokach trójkąta. Z ich końców prowadzi się prostopadłe, a ich przecięcie wyznacza <b>W<sub>R</sub></b>, w przybliżeniu oś anatomiczną serca.</p>
+<p><span class="f">tg α = (I + 2·III) / (√3 · I)</span> &nbsp; <span class="f">W = I / cos α</span></p>
+<p class="leg">α to kąt osi elektrycznej względem odprowadzenia I [°]; I, III to sumy algebraiczne załamków QRS (R − Q − S) w odprowadzeniach I i III [mV lub mm]; W to wartość wektora serca.</p>
+<p><b>Norma: −30° do +90°.</b> Poniżej −30° to lewogram, powyżej +90° prawogram.</p>
 </div>
-<div><img src="img/trojkat.png" style="max-height:55mm"><div class="cap">Ryc. 18.35 (Jaroszyk)</div></div>
+<div style="flex:0.65"><img src="img/trojkat.png" style="max-height:40mm"><div class="cap">Ryc. 18.35</div></div>
 </div>
 
 <h2>Częstość pracy serca</h2>
-<p>Zmierz odstęp <b>RR</b> (od R do R; przy nierównym rytmie średnią z kilku):
-<span class="f">HR = 60 / RR[s]</span> &nbsp; przy 25 mm/s: <span class="f">HR = 1500 / RR[mm]</span> &nbsp; przy 50 mm/s: <span class="f">HR = 3000 / RR[mm]</span><br>
-Przykład: RR = 21 mm przy 25 mm/s → 0,84 s → <b>≈71/min</b>. Norma 60–100/min.</p>
+<p><span class="f">HR = 60 / RR</span> &nbsp; <span class="f">HR = 1500 / RR<sub>mm</sub></span> (przesuw 25 mm/s) &nbsp; <span class="f">HR = 3000 / RR<sub>mm</sub></span> (przesuw 50 mm/s)</p>
+<p class="leg">HR to częstość pracy serca [1/min]; RR to odstęp między szczytami sąsiednich załamków R [s]; RR<sub>mm</sub> to ten sam odstęp zmierzony na papierze [mm]. Norma: 60–100/min.<br>
+Przykład: RR<sub>mm</sub> = 21 mm przy 25 mm/s, więc HR = 1500 / 21 ≈ <b>71/min</b>.</p>
 
 </body></html>
